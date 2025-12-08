@@ -273,6 +273,21 @@
       border-radius: 3px;
     }
     
+    .conditions-link {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    
+    .conditions-link .conditions-grid {
+      transition: all 0.2s;
+    }
+    
+    .conditions-link:active .conditions-grid {
+      transform: scale(0.98);
+      opacity: 0.8;
+    }
+    
     /* Conditions Grid */
     .conditions-grid {
       display: grid;
@@ -513,18 +528,20 @@
         </a>
       </div>
       
-      <div class="conditions-grid">
-        <div class="condition-card">
-          <div class="condition-label">Wave Height</div>
-          <div class="condition-value" id="surf-waves">—</div>
-          <div class="condition-sub">Target: &lt;4 ft</div>
+      <a href="https://www.surfline.com/surf-report/shelter-cove/584204214e65fad6a77096a0" target="_blank" class="conditions-link">
+        <div class="conditions-grid">
+          <div class="condition-card">
+            <div class="condition-label">Wave Height</div>
+            <div class="condition-value">Tap to Check</div>
+            <div class="condition-sub">Target: &lt;4 ft = GO</div>
+          </div>
+          <div class="condition-card">
+            <div class="condition-label">Status</div>
+            <div class="condition-value" style="font-size: 16px;">📲 Surfline</div>
+            <div class="condition-sub">4-5 ft = MAYBE, &gt;5 ft = NO</div>
+          </div>
         </div>
-        <div class="condition-card">
-          <div class="condition-label">Status</div>
-          <div class="condition-value" id="surf-status">—</div>
-          <div class="condition-sub" id="surf-status-sub">Check Surfline</div>
-        </div>
-      </div>
+      </a>
       
       <div class="tide-section">
         <div class="tide-header">
@@ -584,6 +601,21 @@
           <div><div class="link-text">Tide Chart</div><div class="link-sub">Corte Madera</div></div>
         </a>
       </div>
+      
+      <a href="https://www.tideschart.com/United-States/California/Marin-County/Corte-Madera-Creek/" target="_blank" class="conditions-link">
+        <div class="conditions-grid">
+          <div class="condition-card">
+            <div class="condition-label">Tide Times</div>
+            <div class="condition-value">Tap to Check</div>
+            <div class="condition-sub">Find tide changes</div>
+          </div>
+          <div class="condition-card">
+            <div class="condition-label">Status</div>
+            <div class="condition-value" style="font-size: 16px;">📲 Tide Chart</div>
+            <div class="condition-sub">Fish moving water</div>
+          </div>
+        </div>
+      </a>
       
       <div class="trip-box" style="background: linear-gradient(135deg, rgba(249, 115, 22, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%); border-color: rgba(249, 115, 22, 0.3);">
         <div class="trip-title" style="color: var(--accent-orange);">⚡ Stripers = Moving Water</div>
@@ -697,6 +729,7 @@
       { name: 'Upper Sacramento', type: 'Trout', gauge: '11342000', ideal: [800, 2000], season: 'Apr-Nov' },
       { name: 'Lower Sacramento', type: 'Trout', gauge: '11370500', ideal: [3500, 7000], season: 'Year-round' },
       { name: 'Pit River', type: 'Trout', gauge: '11363000', ideal: [300, 450], season: 'Year-round' },
+      { name: 'Putah Creek', type: 'Trout', gauge: '11454000', ideal: [60, 300], season: 'Year-round' },
       { name: 'Lower Owens', type: 'Trout', gauge: '10251300', ideal: [100, 250], season: 'Year-round' },
       { name: 'East Walker', type: 'Trout', gauge: '10293000', ideal: [75, 250], season: 'Apr-Nov' },
       { name: 'Truckee River', type: 'Trout', gauge: '10346000', ideal: [150, 300], season: 'Apr-Nov' },
@@ -710,6 +743,7 @@
       'Upper Sac': [0,0,0,1,2,2,1,1,2,2,1,0],
       'Lower Sac': [1,2,2,2,1,1,1,1,1,2,2,1],
       'Pit River': [1,1,1,2,2,2,1,1,2,2,1,1],
+      'Putah Creek': [1,1,1,2,2,1,0,0,1,2,2,1],
       'Owens': [1,2,2,1,1,1,1,1,1,2,2,1],
       'E. Walker': [0,0,0,1,2,2,1,1,2,2,1,0],
       'Truckee': [0,0,0,1,1,2,1,1,2,2,1,0],
